@@ -1,0 +1,328 @@
+.tempoInput,
+[bpm-error] {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans serif;
+}
+
+[metronome] {
+  position: relative;
+  margin: 0 auto;
+}
+
+[metronome] .bodyUpper {
+  background: url(../img/body_upper.jpg) no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 66%;
+  position: relative;
+}
+
+[metronome] .bodyLower {
+  background: url(../img/body_lower.jpg) no-repeat;
+  background-size: contain;
+  background-position: center top;
+  height: 34%;
+  position: relative;
+}
+
+[wand] {
+  position: relative;
+  top: 11.8%;
+  left: -3%;
+  margin: 0 auto;
+  background: url(../img/wand.png?v3) no-repeat;
+  background-size: contain;
+  background-position: top center;
+  height: 90.29%;
+  
+  /* Vendor prefix hell... CSS preprocessor to the rescue? */
+  transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  
+  transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  
+  transform: rotate(-0.6deg);
+  -webkit-transform: rotate(-0.6deg);
+  -moz-transform: rotate(-0.6deg);
+  -o-transform: rotate(-0.6deg);
+  -ms-transform: rotate(-0.6deg);
+}
+
+[wand].swingLeft {
+  transform: rotate(-35deg);
+  -webkit-transform: rotate(-35deg);
+  -moz-transform: rotate(-35deg);
+  -o-transform: rotate(-35deg);
+  -ms-transform: rotate(-35deg);
+}
+
+[wand].swingRight {
+  transform: rotate(35deg);
+  -webkit-transform: rotate(35deg);
+  -moz-transform: rotate(35deg);
+  -o-transform: rotate(35deg);
+  -ms-transform: rotate(35deg);
+}
+
+[wand].swingToCenter {
+  transition-timing-function: cubic-bezier(0.140, 0.815, 0.475, 1.380);
+  -webkit-transition-timing-function: cubic-bezier(0.140, 0.815, 0.475, 1.380);
+  -moz-transition-timing-function: cubic-bezier(0.140, 0.815, 0.475, 1.380);
+  -o-transition-timing-function: cubic-bezier(0.140, 0.815, 0.475, 1.380);
+}
+
+[bob] {
+  cursor: pointer !important;
+  height: 22% !important;
+  width: 100% !important;
+  background: transparent url(../img/bob.png?v2) no-repeat;
+  background-size: contain;
+  background-position: center center;
+  position: absolute;
+  left: 0 !important;
+  
+  transition: 0.5s bottom ease-out;
+  -webkit-transition: 0.5s bottom ease-out;
+  -moz-transition: 0.5s bottom ease-out;
+  -o-transition: 0.5s bottom ease-out;
+}
+
+[bob-drag-region] {
+  position: relative;
+  width: 15%;
+  height: 74%;
+  top: 24.1%;
+  margin: 0 auto;
+}
+
+.tempoLabel {
+  text-indent: -10000px;
+  background: url(../img/tempo_label.jpg) no-repeat;
+  background-size: contain;
+  width: 18.1%;
+  height: 9%;
+  position: absolute;
+  top: 12.658%;
+  left: 22.194%;
+}
+
+.tempoInput {
+  background: url(../img/tempo_input.jpg) no-repeat left center;
+  background-size: contain;
+  width: 25.255%;
+  height: 12.5%;
+  position: absolute;
+  top: 9.5%;
+  left: 43.878%;
+  border: 0;
+  background-color: transparent;
+  font-weight: bold;
+  color: #2f1400;
+  padding: 0 1.786%;
+}
+
+.tempoInput.ng-invalid,
+[bpm-error] {
+  color: #f90;
+}
+
+[bpm-error] {
+  font-size: 8pt;
+  position: absolute;
+  left: 46%;
+  top: 4.5%;
+  height: 5.3%;
+}
+
+/* Webkit puts up/down arrows ("spinner") on input[type="number"] */
+.tempoInput::-webkit-outer-spin-button,
+.tempoInput::-webkit-inner-spin-button {
+  display: none;
+}
+
+.toggleBtn {
+  cursor: pointer;
+  text-indent: -10000px;
+  background-color: transparent;
+  border: 0;
+  background: url(../img/toggle_btn.jpg) no-repeat top left;
+  background-size: contain;
+  width: 51.53%;
+  height: 30%;
+  position: absolute;
+  top: 27.848%;
+  left: 21.939%;
+}
+
+.toggleBtn.depressed {
+  background-image: url(../img/toggle_btn_depressed.jpg);
+}
+
+.credit {
+  background: url(../img/credit.jpg) no-repeat top left;
+  background-size: contain;
+  width: 42.347%;
+  height: 6%;
+  text-indent: -10000px;
+  position: absolute;
+  bottom: 25.316%;
+  left: 26.276%;
+}
+
+.metronomeMeta [nav] {
+  position: absolute;
+  bottom: 25%;
+  right: 1%;
+  width: 6%;
+  height: 40%;
+  
+  transform-origin: 0 100%;
+  -webkit-transform-origin: 0 100%;
+  -moz-transform-origin: 0 100%;
+  -o-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  
+  transform: rotate(-11deg);
+  -webkit-transform: rotate(-11deg);
+  -moz-transform: rotate(-11deg);
+  -o-transform: rotate(-11deg);
+  -ms-transform: rotate(-11deg);
+}
+
+.metronomeMeta [nav],
+.metronomeMeta [nav-item] {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.metronomeMeta [nav-item] {
+  display: block;
+  text-align: center;
+  margin: 40% 0;
+  height: 15%;
+}
+
+.metronomeMeta [nav] a {
+  display: block;
+  color: #666;
+  text-decoration: none;
+  padding: 2px 4px;
+  background: beige;
+  border: 2px solid lightGray;
+  border-radius: 5px;
+  height: 100%;
+  
+  /* May/may not be needed for non-Webkit browsers; force hardware accelerated anti-aliasing
+     esp. to fix a Webkit issue where font AA changes during translate on :hover */
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  -o-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  
+  transition-duration: 0.2s;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
+  
+  transition-property:  -webkit-transform,color,border-color;
+  -webkit-transition-property:  -webkit-transform,color,border-color;
+  -moz-transition-property:  -webkit-transform,color,border-color;
+  -o-transition-property:  -webkit-transform,color,border-color;
+}
+
+.metronomeMeta [nav] a:hover,
+.metronomeMeta [nav] a:focus,
+.metronomeMeta [nav] a.active {
+  outline: 0;
+  border-color: slateGray;
+  color: darkSlateGray;
+  
+  transform: translate(10%, 0);
+  -webkit-transform: translate(10%, 0);
+  -moz-transform: translate(10%, 0);
+  -o-transform: translate(10%, 0);
+  -ms-transform: translate(10%, 0);
+}
+
+@media screen and (max-height: 600px) {
+  .metronomeMeta [nav] {
+    bottom: 105%;
+    right: 5%;
+    width: 9%;
+    height: 70%;
+    
+    transform: none;
+    -webkit-transform: none;
+    -moz-transform: none;
+    -o-transform: none;
+    -ms-transform: none;
+  }
+}
+
+@media screen and (max-height: 300px) {
+  .metronomeMeta [nav] {
+    width: 18%;
+    height: 135%;
+    bottom: 110%;
+    right: -4%;
+  }
+}
+
+[meta-page] {
+  position: absolute;
+  top: 2%;
+  left: 4%;
+  height: 72%;
+  overflow: auto;
+  border: 2px solid black;
+  width: 79%;
+  background: rgba(245, 245, 220, 0.95);
+  padding: 1% 2%;
+  font-size: 11pt;
+}
+
+[meta-page] h2,
+[meta-page] h3 {
+  margin: 10px 0 0;
+}
+
+[meta-page] h2:first-child {
+  margin-top: 0;
+}
+
+[meta-page] h2 {
+  font-size: 15pt;
+}
+
+[meta-page] h3 {
+  font-size: 13pt;
+}
+
+[meta-page] ul,
+[meta-page] p {
+  margin: 5px 0 0;
+  padding: 0;
+}
+
+[meta-page] li {
+  margin: 0 0 0 30px;
+  padding: 0;
+}
+
+.syntaxhighlighter, .syntaxhighlighter a, .syntaxhighlighter div, .syntaxhighlighter code, .syntaxhighlighter table, .syntaxhighlighter table td, .syntaxhighlighter table tr, .syntaxhighlighter table tbody, .syntaxhighlighter table thead, .syntaxhighlighter table caption, .syntaxhighlighter textarea,
+.syntaxhighlighter .line.alt2, .syntaxhighlighter .line.alt1 {
+  font-size: 0.98em !important;
+  background-color: transparent !important;
+}
+
+.syntaxhighlighter.fullMetaPage {
+  margin: -1% -2% !important;
+  overflow: visible !important;
+}

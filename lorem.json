@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "You probably haven't heard of them.\r\n",
+        "text2": "It's been really nice getting to know you.\r\n",
+        "text3": "A pig in the mud\r\n",
+        "text4": "Spatula\r\n"
+    },
+    {
+        "id": 1,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "This is probably going to take a while.\r\n",
+        "text2": "There's a package here with your name on it.\r\n",
+        "text3": "A leafblower from hell\r\n",
+        "text4": "Meat grinder\r\n"
+    },
+    {
+        "id": 2,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "You probably haven't heard of them.\r\n",
+        "text2": "I've got two tickets to Morrisey wanna come?\r\n",
+        "text3": "Boxing a glacier\r\n",
+        "text4": "Lemon juice\r\n"
+    },
+    {
+        "id": 3,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "I'm sorry but we're out of Cibatta.\r\n",
+        "text2": "Hot chocolate by the fire\r\n",
+        "text3": "White pants after labor day\r\n",
+        "text4": "Guiness"
+    },
+    {
+        "id": 4,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "Come at me, bro!\r\n",
+        "text2": "English muffins and vegan pancakes.\r\n",
+        "text3": "Playing in a sandbox\r\n",
+        "text4": "Fanny pack"
+    },
+    {
+        "id": 5,
+        "picture": "http://lorempixel.com/640/480/people/",
+        "text1": "Put a bird on it.\r\n",
+        "text2": "The smell of pine trees in the Summer\r\n",
+        "text3": "Baby dolphins playing otters in waterpolo\r\n",
+        "text4": "Flute"
+    }
+]

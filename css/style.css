@@ -1,0 +1,126 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding-top: 100px;
+}
+.navbar-inverse {
+  background: #2781C0;
+  border: none;
+}
+.navbar-inverse.on {
+  background: #ca76bd;
+}
+.navbar-inverse .navbar-nav li > a {
+  color: white;
+  font-size: 20px;
+  padding: 24px;
+  /*			font-weight: 300;
+*/
+}
+.navbar-inverse .navbar-nav li > a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.navbar-inverse .navbar-nav li.active > a,
+.navbar-inverse .navbar-nav li.open a:focus {
+  background: rgba(0, 0, 0, 0.15);
+}
+.navbar-inverse .navbar-nav .dropdown-menu a {
+  font-size: 18px;
+  color: #444;
+  padding: 12px;
+}
+.navbar-inverse .navbar-nav li {
+  /*&.active, &:hover, &:focus {
+				.timer {
+					.btn {
+						background: #54b561;
+					}
+				}
+			}*/
+}
+.navbar-inverse .navbar-nav li .timer #runner {
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 20px;
+}
+.navbar-inverse .navbar-nav li .timer .btn {
+  padding: 0;
+  width: 68px;
+  height: 68px;
+  position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0;
+  font-size: 28px;
+  background: #54b561;
+}
+.navbar-inverse .navbar-nav li .timer .btn:hover,
+.navbar-inverse .navbar-nav li .timer .btn.active,
+.navbar-inverse .navbar-nav li .timer .btn:focus {
+  background: #3ca54b;
+}
+.navbar-inverse .navbar-nav li .timer .btn i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -14px 0 0 -13px;
+}
+.navbar-inverse .navbar-nav li .timer .btn .glyphicon-stop {
+  display: none;
+  margin: -14px 0 0 -14px;
+}
+.navbar-inverse .navbar-nav li .timer .btn.on {
+  background: #e6808e;
+}
+.navbar-inverse .navbar-nav li .timer .btn.on .glyphicon-stop {
+  display: block;
+}
+.navbar-inverse .navbar-nav li .timer .btn.on .glyphicon-play {
+  display: none;
+}
+.navbar-inverse .navbar-nav li .timer .btn.on:hover {
+  background: #d86677;
+}
+.navbar-inverse .navbar-brand {
+  color: white;
+  font-size: 36px;
+  /*background: #ca76bd;*/
+  background: transparent;
+  padding: 24px;
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:active,
+.navbar-inverse .navbar-brand:focus {
+  /*background: #bf53ae;*/
+  background: rgba(0, 0, 0, 0.2);
+}
+.stage {
+  padding-top: 50px;
+}
+aside {
+  padding-top: 0px;
+}
+blockquote {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 20px;
+  color: #222;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+.widget .metronome {
+  zoom: .65;
+}
+.timer {
+  text-align: center;
+}
+.timer span {
+  font-family: 'Roboto Condensed', 'Helvetica Neue', Arial, serif;
+  font-size: 64px;
+}
+h2 {
+  color: #999;
+  font-size: 18px;
+  text-transform: uppercase;
+  padding: 10px;
+  border-bottom: 1px solid #dadada;
+}

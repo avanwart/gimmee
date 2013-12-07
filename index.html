@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Gimmee | The Cool Play Thing</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+		<!-- Latest compiled and minified JS -->
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/metronome.css">
+		<link rel="stylesheet" href="css/jquery.ui.css">
+		<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300' rel='stylesheet' type='text/css'>
+
+		<!-- Libraries, etc. -->
+		<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.9.2.custom.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/shCore.css" />
+		<link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" />
+		<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+		<script type="text/javascript" src="js/jquery-ui-1.9.2.custom.min.js"></script>
+		<script type="text/javascript" src="js/buzz.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+
+		<!-- Focus your attention here, the metronome app code -->
+		<script type="text/javascript" src="js/metronome.js"></script>
+
+	</head>
+	<body>
+	<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Gimmee</a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Project Resources <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="http://getbootstrap.com" target="_blank">Twitter Bootstrap</a></li>
+							<li><a href="https://github.com/jylauril/jquery-runner" target="_blank">jQuery Runner</a></li>
+							<li><a href="http://angularjs.org" target="_blank">Angular JS</a></li>
+							<li><a href="http://victorblog.com/metronome" target="_blank">Old Timey Metronome</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 stage">
+				<div class="row">
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<img id="person" src="http://placehold.it/640x480" class="img-responsive thumbnail" alt="Image">
+					</div>
+					<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+						<blockquote id="text1">Text blurb 1</blockquote>
+						<blockquote id="text2">Text blurb 2</blockquote>
+						<blockquote id="text3">Text blurb 3</blockquote>
+						<blockquote id="text4">Text blurb 4</blockquote>
+					</div>
+				</div>
+				
+				<!-- <div class="table-responsive">
+					<table class="table">
+						<tbody>
+							<tr>
+								<td><a href="#" class="btn btn-block btn-lg btn-primary"><i class="glyphicon glyphicon-lg glyphicon-arrow-left"></i></a></td>
+								<td><a href="#" class="btn btn-block btn-lg btn-primary"><i class="glyphicon glyphicon-lg glyphicon-hand-up"></i></a></td>
+								<td><a href="#" class="btn btn-block btn-lg btn-primary"><i class="glyphicon glyphicon-lg glyphicon-arrow-right"></i></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div> -->
+			</div>
+			<aside class="col-lg-4 col-md-4 col-sm-4 col-xs-12 sidebar">
+				<div class="bs-sidebar">
+					<div class="widget timer">
+						<span id="runner"></span>
+						<!-- <a href="#" class="btn btn-large btn-primary img-rounded toggle-time">
+							<i class="glyphicon glyphicon-play"></i>
+							<i class="glyphicon glyphicon-stop"></i>
+						</a> -->
+					</div>
+					<div class="widget">
+						<div metronome ng-app="MetronomeApp" ng-controller="MainCtrl" class="metronome">
+							<div class="bodyUpper">
+							  <div wand ng-class="{swingLeft: swingLeft, swingRight: swingRight, swingToCenter: swingToCenter}" style="
+							              transition-duration: {{getWandSwingTransitionDuration()}};
+							              -webkit-transition-duration: {{getWandSwingTransitionDuration()}};
+							              -moz-transition-duration: {{getWandSwingTransitionDuration()}};
+							              -o-transition-duration: {{getWandSwingTransitionDuration()}}">
+							      <div bob-drag-region>
+							          <a bob></a>
+							      </div>
+							  </div>
+							</div>
+							<div class="bodyLower">
+							  	<form ng-submit="toggleMetronome()" novalidate name="metronomeForm">
+							      <div>
+							         <label class="tempoLabel" for="bpm">Tempo:</label>
+							         <span bpm-error ng-show="metronomeForm.bpm.$invalid">{{getInputErrorText()}}</span>
+							         <input type="number" ng-model="bpm" id="bpm" class="tempoInput" bpm-input name="bpm" />
+							         <button type="submit" class="toggleBtn" ng-class="{depressed: started}">
+							            <span ng-show="started">Stop</span>
+							            <span ng-show="!started">Start</span>
+							         </button>
+							      </div>
+							  	</form>
+							</div>
+						</div>	
+					</div>
+					<!-- <div class="widget">
+						<h2>Scale</h2>
+						<img src="http://placehold.it/260x260" alt="" class="thumbnail">
+					</div> -->
+				</div>
+			</aside>
+		</div>
+	</div>
+	<footer>
+		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+		<script src="js/jquery.runner.js"></script>
+		<script src="js/app.js"></script>
+	</footer>
